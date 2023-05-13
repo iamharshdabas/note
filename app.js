@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const app = express();
 
 const today = new Date();
@@ -14,7 +14,7 @@ if (todayDay === 0 || todayDay === 6) {
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.render('index', { dayName: dayName });
 });
 
