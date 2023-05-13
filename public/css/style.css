@@ -59,7 +59,7 @@ button {
   background-color: #8000FF;
   color: #E6E6E6;
   font-size: 3rem;
-  margin-left: 6px;
+  margin: 0px 0px 6px 6px;
   border-width: 0;
 }
 
