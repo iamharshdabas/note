@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const today = new Date().toLocaleDateString('en-us', { weekday: 'long', month: 'long', day: 'numeric' });
-let newItem;
+let items = [];
 
 app.set('view engine', 'ejs');
 
@@ -12,12 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (_, res) => {
   res.render('index', {
     today: today,
-    newItem: newItem
+    items: items
   });
 });
 
 app.post('/', (req, res) => {
-  newItem = req.body.newItem;
+  items.push(req.body.item);
   res.redirect('/');
 });
 

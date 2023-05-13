@@ -10,15 +10,17 @@
 
 <body>
   <h1>
-    <%=today%>
+    <%= today %>
   </h1>
   <ul>
-    <li>
-      <%=newItem%>
-    </li>
+    <% for (let i=0; i < items.length; i++) { %>
+      <li>
+        <%= items[i] %>
+      </li>
+      <%}%>
   </ul>
   <form action="/" method="post">
-    <input type="text" name="newItem" placeholder="New TODO">
+    <input type="text" name="item" placeholder="New TODO">
     <button type="submit">Add</button>
   </form>
 </body>
