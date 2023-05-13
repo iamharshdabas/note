@@ -6,4 +6,4 @@ app.get('/', (req, res) => {
   res.send('Working')
 });
 
-app.listen(5769);
+app.listen(6969, () => console.log('Server app.js listening on port 6969'));
