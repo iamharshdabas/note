@@ -7,9 +7,9 @@ const todayDay = today.getDay();
 let dayName
 
 if (todayDay === 0 || todayDay === 6) {
-  dayName = 'its weekend'
+  dayName = 'weekend'
 } else {
-  dayName = 'its weekday'
+  dayName = 'weekday'
 }
 
 app.set('view engine', 'ejs');
